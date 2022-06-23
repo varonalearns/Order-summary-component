@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repo](hhttps://github.com/varonalearns/Order-summary-component)
+- Solution URL: [GitHub Repo](https://github.com/varonalearns/Order-summary-component)
 - Live Site URL: [Vercel Live Site](https://order-summary-component-tau-eight.vercel.app/)
 
 ## My process
