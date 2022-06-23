@@ -1,0 +1,284 @@
+/* ------------------------------ Mobile First Design ------------------------------ */
+
+/* -------------------- 
+    Variables
+---------------------*/
+:root {
+    /* Primary colors */
+    --clr-primary-1: hsl(225, 100%, 94%);
+    --clr-primary-2: hsl(245, 75%, 52%);
+
+    /* Neutral colors */
+    --clr-secondary-1: hsl(225, 100%, 98%);
+    --clr-secondary-2: hsl(224, 23%, 55%);
+    --clr-secondary-3: hsl(223, 47%, 23%);
+
+    /* Accent colors */
+    --clr-active: hsl(245, 83%, 68%);
+
+    /* Fonts */
+    --ff-primary: 'Red Hat Display', sans-serif;
+}
+
+/* -------------------- 
+    Global Styles
+---------------------*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary-1);
+    position: relative;
+}
+main {
+    height: 475px;
+    background-color: var(--clr-secondary-1);
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+h1 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    color: var(--clr-secondary-3);
+    font-weight: 900;
+}
+footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* -------------------- 
+    Class Styles
+---------------------*/
+/* Background Pattern */
+.bg-pattern {
+    background-image: url('/images/pattern-background-mobile.svg');
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+/* Header Section*/
+.header-sect {
+    height: 30vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url("./images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Order Summary Section */
+.order-sect {
+    text-align: center;
+    margin: 0 1rem;
+    color: var(--clr-secondary-2);
+}
+
+/* Payment Plan Section */
+.plan-sect {
+    background-color: hsl(235, 100%, 97%);
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+.plan-sect .plan {
+    margin-left: 0.5rem;
+}
+.plan-sect .plan span:first-child{
+    font-weight: 900;
+}
+.plan-sect .plan span:last-child{
+    color: var(--clr-secondary-2);
+}
+.plan-sect a {
+    color: var(--clr-primary-2);
+    font-weight: 900;
+}
+
+/* Payment Button */
+.pay-btn {
+    text-align: center;
+    color: var(--clr-primary-1); 
+    background-color: var(--clr-primary-2);
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-weight: 900;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    text-align: center;
+    color: var(--clr-secondary-2);
+    font-weight: 900;
+}
+
+/* ------------------------------ Large Mobile Design ------------------------------ */
+
+@media screen and (min-width: 375px) {
+    /* -------------------- 
+        Global Styles
+    ---------------------*/
+    main {
+        height: 565px;
+        max-width: 400px;
+    }
+    h1 {
+        margin: 1.25rem 0;
+    }
+
+    /* -------------------- 
+        Class Styles
+    ---------------------*/
+    /* Order Summary Section */
+    .order-sect {
+        margin: 0 2.5rem;
+        line-height: 1.50;
+    }
+
+    /* Payment Plan Section */
+    .plan-sect {
+        padding: 1rem;
+    }
+    .plan-sect .plan span {
+        margin-left: 0.75rem;
+    }
+
+    /* Payment Button */
+    .pay-btn {
+        margin: 1.25rem 1rem;
+        padding: 1rem;
+    }
+
+}
+
+/* ------------------------------ Tablet Design ------------------------------ */
+
+@media screen and (min-width: 700px) {
+    /* -------------------- 
+        Global Styles
+    ---------------------*/
+    main {
+        height: 650px;
+        max-height: 650px;
+    }
+    h1 {
+        margin: 1.75rem 0;
+    }
+
+    /* -------------------- 
+        Class Styles
+    ---------------------*/
+    /* Header Section*/
+    .header-sect {
+        height: 22vh;
+    }
+
+    /* Order Summary Section */
+    .order-sect {
+        margin: 0 2rem;
+    }
+
+    /* Payment Plan Section */
+    .plan-sect {
+        margin: 1rem 1rem 0 1rem;
+        padding: 1rem 1.50rem;
+    }
+    .plan-sect .plan {
+        margin-left: 1rem;
+    }
+
+    /* Payment Button */
+    .pay-btn {
+        margin: 1.50rem 1rem;
+        padding: 1.25rem 1.50rem;
+    }
+}
+
+/* ------------------------------ Small Desktop Design ------------------------------ */
+
+@media screen and (min-width: 1200px) { 
+    /* -------------------- 
+        Global Styles
+    ---------------------*/
+    main {
+        height: 625px;
+    }
+    
+    /* -------------------- 
+        Class Styles
+    ---------------------*/
+    /* Background Pattern */
+    .bg-pattern {
+        background-image: url('/images/pattern-background-desktop.svg');
+        height: 57vh;
+    }
+
+    /* Header Section*/
+    .header-sect {
+        height: 30vh;
+    }
+
+    /* Payment Plan Section */
+    .plan-sect a:hover {
+        text-decoration: none;
+        color: var(--clr-active);
+    }
+    .pay-btn:hover {
+        background-color: var(--clr-active);
+        cursor: pointer;
+    }
+    .cancel-btn:hover {
+        color: var(--clr-secondary-3);
+        cursor: pointer;
+    }
+}
+
+/* ------------------------------ Desktop Design ------------------------------ */
+
+@media screen and (min-width: 1200px) { 
+    /* -------------------- 
+        Class Styles
+    ---------------------*/
+    /* Background Pattern */
+    .bg-pattern {
+        height: 57vh;
+    }
+
+    /* Header Section*/
+    .header-sect {
+        height: 27vh;
+    }
+}
+
+/* ------------------------------ Large Desktop Design ------------------------------ */
+
+@media screen and (min-width: 1900px) { 
+    /* -------------------- 
+        Class Styles
+    ---------------------*/
+    /* Background Pattern */
+    .bg-pattern {
+        height: 60vh;
+    }
+
+    /* Header Section*/
+    .header-sect {
+        height: 22vh;
+    }
+}
